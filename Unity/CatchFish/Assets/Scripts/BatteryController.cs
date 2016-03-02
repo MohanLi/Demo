@@ -18,6 +18,7 @@ public class BatteryController : MonoBehaviour {
             mIsFiring = true;
             StartCoroutine(Fire());
         }
+        AdjustBatteryDirection();
 	}
 
     IEnumerator Fire() {
@@ -35,5 +36,21 @@ public class BatteryController : MonoBehaviour {
 
     private bool IsFiring() {
         return mIsFiring;// mAnimator.GetBool(mAnimationName);
+    }
+
+    //调整炮台方向
+    private void AdjustBatteryDirection() {
+        Vector2 point = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+        float offSetX = point.x - transform.position.x;
+        float offSetY = point.y - transform.position.y;
+        //调整值
+        offSetY = offSetY < 0 ? 0 : offSetY;
+
+        // -90 < angle < 90
+        float angle = Mathf.Atan(offSetX / offSetY) * 180 / Mathf.PI;
+        
+        angle = angle > 85 ? 85 : angle;
+        angle = angle < -85 ? -85 : angle;
+        transform.rotation = Quaternion.AngleAxis(angle, Vector3.back);
     }
 }
