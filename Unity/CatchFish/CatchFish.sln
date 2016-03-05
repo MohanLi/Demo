@@ -1,7 +1,7 @@
-﻿
-Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2013
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CatchFish.CSharp", "CatchFish.CSharp.csproj", "{A414DCD9-CC38-82E8-26CF-FE774BE5AA5F}"
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2008
+
+Project("{08CAF5EF-AB0B-C1F9-594A-1BF90078ACF3}") = "CatchFish", "Assembly-CSharp.csproj", "{19FCB2C4-996B-9709-D887-3B698C3A6BEE}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -9,12 +9,15 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{A414DCD9-CC38-82E8-26CF-FE774BE5AA5F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{A414DCD9-CC38-82E8-26CF-FE774BE5AA5F}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{A414DCD9-CC38-82E8-26CF-FE774BE5AA5F}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{A414DCD9-CC38-82E8-26CF-FE774BE5AA5F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{19FCB2C4-996B-9709-D887-3B698C3A6BEE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{19FCB2C4-996B-9709-D887-3B698C3A6BEE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{19FCB2C4-996B-9709-D887-3B698C3A6BEE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{19FCB2C4-996B-9709-D887-3B698C3A6BEE}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(MonoDevelopProperties) = preSolution
+		StartupItem = Assembly-CSharp.csproj
 	EndGlobalSection
 EndGlobal
