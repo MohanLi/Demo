@@ -22,12 +22,10 @@ public class BatteryController : MonoBehaviour {
 	}
 
     IEnumerator Fire() {
-        Debug.Log("1===========");
         SetFire(mAnimationName, true);
         yield return new WaitForSeconds(0.433f);
         SetFire(mAnimationName, false);
         mIsFiring = false;
-        Debug.Log("2===========");
     }
 
     private void SetFire(string name, bool fire) {
