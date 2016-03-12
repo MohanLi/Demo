@@ -11,11 +11,6 @@ public class FishController : MonoBehaviour {
     //鱼改变方向范围值(-angle, angle)
     private float angle = 10f;
 
-	// Use this for initialization
-	void Start () {
-        
-	}
-
     //鱼游动
     void MoveFish() {
         transform.Translate(Vector3.right * Time.deltaTime * mSpeed);

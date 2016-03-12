@@ -5,6 +5,7 @@ public class BatteryController : MonoBehaviour {
     private Animator mAnimator;
     private string mAnimationName = "IsShoot";
     private bool mIsFiring = false;
+    private float mBatteryAngle = 0f;
 
 	// Use this for initialization
 	void Start () {
@@ -13,12 +14,15 @@ public class BatteryController : MonoBehaviour {
 	}
 	
 	// Update is called once per frame
-	void Update () {
+	void FixedUpdate () {
         if (Input.GetMouseButtonUp(0) && !IsFiring()) {
             mIsFiring = true;
             StartCoroutine(Fire());
         }
         AdjustBatteryDirection();
+        //保存数据
+        SaveAngle(mBatteryAngle);
+        SaveTransform(gameObject.transform);
 	}
 
     IEnumerator Fire() {
@@ -45,10 +49,19 @@ public class BatteryController : MonoBehaviour {
         offSetY = offSetY < 0 ? 0 : offSetY;
 
         // -90 < angle < 90
-        float angle = Mathf.Atan(offSetX / offSetY) * 180 / Mathf.PI;
-        
-        angle = angle > 85 ? 85 : angle;
-        angle = angle < -85 ? -85 : angle;
-        transform.rotation = Quaternion.AngleAxis(angle, Vector3.back);
+        mBatteryAngle = Mathf.Atan(offSetX / offSetY) * 180 / Mathf.PI;
+
+        mBatteryAngle = mBatteryAngle > 85 ? 85 : mBatteryAngle;
+        mBatteryAngle = mBatteryAngle < -85 ? -85 : mBatteryAngle;
+        transform.rotation = Quaternion.AngleAxis(mBatteryAngle, Vector3.back);
+    }
+
+    //保存炮塔角度
+    private void SaveAngle(float angle) {
+        DataManager.GetInstance().SetBatteryAngle(angle);
+    }
+
+    private void SaveTransform(Transform tf) {
+        DataManager.GetInstance().SetTransform(tf);
     }
 }
