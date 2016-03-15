@@ -1,16 +1,16 @@
 fileFormatVersion: 2
 guid: 5cf8aab48a7a76241b62544c284c8809
-timeCreated: 1438483780
+timeCreated: 1457826494
 licenseType: Pro
 TextureImporter:
   fileIDToRecycleName:
-    21300000: web7
-    21300002: web1
-    21300004: web2
-    21300006: web3
-    21300008: web4
-    21300010: web5
-    21300012: web6
+    21300000: web6
+    21300002: web0
+    21300004: web1
+    21300006: web2
+    21300008: web3
+    21300010: web4
+    21300012: web5
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -24,7 +24,7 @@ TextureImporter:
   bumpmap:
     convertToNormalMap: 0
     externalNormalMap: 0
-    heightScale: .25
+    heightScale: 0.25
     normalMapFilter: 0
   isReadable: 0
   grayScaleToAlpha: 0
@@ -44,11 +44,12 @@ TextureImporter:
   lightmap: 0
   rGBM: 0
   compressionQuality: 50
+  allowsAlphaSplitting: 0
   spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
-  spritePivot: {x: .5, y: .5}
+  spritePivot: {x: 0.5, y: 0.5}
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spritePixelsToUnits: 100
   alphaIsTransparency: 1
@@ -56,7 +57,7 @@ TextureImporter:
   buildTargetSettings: []
   spriteSheet:
     sprites:
-    - name: web7
+    - name: web6
       rect:
         serializedVersion: 2
         x: 19
@@ -64,9 +65,42 @@ TextureImporter:
         width: 202
         height: 199
       alignment: 0
-      pivot: {x: .5, y: .5}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: web1
+      outline:
+      - - {x: 69, y: -91.5}
+        - {x: 70, y: -91.5}
+        - {x: 78, y: -87.5}
+        - {x: 76, y: -90.5}
+        - {x: 76, y: -92.5}
+        - {x: 84, y: -95.5}
+        - {x: 94, y: -86.5}
+        - {x: 92, y: -83.5}
+        - {x: 100, y: -86.5}
+        - {x: 101, y: -80.5}
+        - {x: 101, y: 61.5}
+        - {x: 93, y: 80.5}
+        - {x: 85, y: 86.5}
+        - {x: 82, y: 88.5}
+        - {x: 60, y: 99.5}
+        - {x: -101, y: 99.5}
+        - {x: -101, y: -30.5}
+        - {x: -94, y: -72.5}
+        - {x: -91, y: -77.5}
+        - {x: -88, y: -78.5}
+        - {x: -93, y: -79.5}
+        - {x: -82, y: -95.5}
+        - {x: -64, y: -99.5}
+        - {x: 76, y: -99.5}
+        - {x: 76, y: -91.5}
+        - {x: 73, y: -90.5}
+        - {x: 70, y: -92.5}
+      - - {x: -76, y: -94.5}
+        - {x: -73, y: -93.5}
+        - {x: -73, y: -90.5}
+        - {x: -76, y: -89.5}
+        - {x: -78, y: -91.5}
+    - name: web0
       rect:
         serializedVersion: 2
         x: 336
@@ -74,9 +108,21 @@ TextureImporter:
         width: 83
         height: 84
       alignment: 0
-      pivot: {x: .5, y: .5}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: web2
+      outline:
+      - - {x: -36.5, y: 42}
+        - {x: -41.5, y: 38}
+        - {x: -41.5, y: -42}
+        - {x: 41.5, y: -42}
+        - {x: 41.5, y: 40}
+        - {x: 40.5, y: 42}
+      - - {x: 37.5, y: -42}
+        - {x: 41.5, y: -42}
+        - {x: 41.5, y: -39}
+        - {x: 38.5, y: -38}
+        - {x: 36.5, y: -40}
+    - name: web1
       rect:
         serializedVersion: 2
         x: 14
@@ -84,9 +130,18 @@ TextureImporter:
         width: 110
         height: 107
       alignment: 0
-      pivot: {x: .5, y: .5}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: web3
+      outline:
+      - - {x: -50, y: 53.5}
+        - {x: -55, y: 36.5}
+        - {x: -55, y: -44.5}
+        - {x: -54, y: -49.5}
+        - {x: -49, y: -53.5}
+        - {x: 50, y: -53.5}
+        - {x: 55, y: -52.5}
+        - {x: 55, y: 53.5}
+    - name: web2
       rect:
         serializedVersion: 2
         x: 178
@@ -94,9 +149,19 @@ TextureImporter:
         width: 126
         height: 124
       alignment: 0
-      pivot: {x: .5, y: .5}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: web4
+      outline:
+      - - {x: 43, y: -62}
+        - {x: 50, y: -62}
+        - {x: 59, y: -59}
+        - {x: 63, y: -50}
+        - {x: 63, y: 62}
+        - {x: -63, y: 62}
+        - {x: -63, y: -62}
+        - {x: 43, y: -62}
+        - {x: 43, y: -59}
+    - name: web3
       rect:
         serializedVersion: 2
         x: 256
@@ -104,9 +169,25 @@ TextureImporter:
         width: 144
         height: 142
       alignment: 0
-      pivot: {x: .5, y: .5}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: web5
+      outline:
+      - - {x: 35, y: 71}
+        - {x: -20, y: 71}
+        - {x: -64, y: 59}
+        - {x: -72, y: 21}
+        - {x: -72, y: -34}
+        - {x: -70, y: -58}
+        - {x: -68, y: -60}
+        - {x: -65, y: -61}
+        - {x: -66, y: -61}
+        - {x: -72, y: -65}
+        - {x: -71, y: -71}
+        - {x: 68, y: -71}
+        - {x: 72, y: -70}
+        - {x: 72, y: 58}
+        - {x: 66, y: 64}
+    - name: web4
       rect:
         serializedVersion: 2
         x: 2
@@ -114,9 +195,24 @@ TextureImporter:
         width: 160
         height: 148
       alignment: 0
-      pivot: {x: .5, y: .5}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: web6
+      outline:
+      - - {x: -46, y: 74}
+        - {x: -66, y: 58}
+        - {x: -80, y: 21}
+        - {x: -80, y: -67}
+        - {x: -79, y: -74}
+        - {x: 80, y: -74}
+        - {x: 80, y: 48}
+        - {x: 51, y: 74}
+      - - {x: -66, y: -59}
+        - {x: -61, y: -63}
+        - {x: -58, y: -61}
+        - {x: -60, y: -56}
+        - {x: -64, y: -56}
+        - {x: -66, y: -58}
+    - name: web5
       rect:
         serializedVersion: 2
         x: 244
@@ -124,8 +220,17 @@ TextureImporter:
         width: 178
         height: 180
       alignment: 0
-      pivot: {x: .5, y: .5}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -89, y: 90}
+        - {x: -89, y: -30}
+        - {x: -85, y: -73}
+        - {x: -26, y: -90}
+        - {x: 54, y: -90}
+        - {x: 89, y: -83}
+        - {x: 89, y: 90}
+    outline: []
   spritePackingTag: 
   userData: 
   assetBundleName: 

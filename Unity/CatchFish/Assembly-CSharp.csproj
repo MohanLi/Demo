@@ -52,6 +52,7 @@
      <Compile Include="Assets\Scripts\DestroyObject.cs" />
      <Compile Include="Assets\Scripts\FishController.cs" />
      <Compile Include="Assets\Scripts\FishFactory.cs" />
+     <Compile Include="Assets\Scripts\WebController.cs" />
  <Reference Include="UnityEngine.UI">
  <HintPath>D:/Program Files (x86)/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
  </Reference>

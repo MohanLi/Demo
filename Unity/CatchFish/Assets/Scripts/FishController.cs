@@ -10,6 +10,8 @@ public class FishController : MonoBehaviour {
     private float mSpeed = 1f;
     //鱼改变方向范围值(-angle, angle)
     private float angle = 10f;
+    //HP
+    private int mHP = 3;
 
     //鱼游动
     void MoveFish() {
@@ -30,4 +32,28 @@ public class FishController : MonoBehaviour {
         MoveFish();
        
 	}
+
+    //void OnCollisionEnter2D(Collision2D coll) {
+    //    if (coll.gameObject.tag == "WEB") {
+    //        mHP--;
+    //    }
+    //    if (mHP <= 0) {
+    //        Destroy(gameObject);
+    //        //通知更新分数
+    //    }
+    //    Debug.Log(coll.gameObject.tag + "=================" + mHP);
+    //}
+    
+    //没有物理碰撞
+    void OnTriggerEnter2D(Collider2D collider) {
+        if (collider.gameObject.tag == "WEB")
+        {
+            mHP--;
+        }
+        if (mHP <= 0)
+        {
+            Destroy(gameObject);
+            //通知更新分数
+        }
+    }
 }
