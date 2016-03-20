@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.UI;
 
 [System.Serializable]//只有序列化，在程序中才现实出来
 public class Boundary
@@ -15,6 +16,22 @@ public class PlayerController : MonoBehaviour
     public float tilt;
     //范围
     public Boundary boundary;
+
+    public GameObject shot;
+    public Transform shotSpawn;
+    public float fireRate;
+    private float nextFrie;
+
+    void Update()
+    {
+        if (Input.GetButton("Fire1") && Time.time > nextFrie) 
+        {
+            nextFrie = Time.time + fireRate;
+            Instantiate(shot, shotSpawn.position, shotSpawn.rotation);
+
+            gameObject.GetComponent<AudioSource>().Play();
+        }
+    }
 
     void FixedUpdate()
     {
@@ -40,5 +57,4 @@ public class PlayerController : MonoBehaviour
         //设置倾斜角度
         rigidbody.rotation = Quaternion.Euler(0.0f, 0.0f, rigidbody.velocity.x * -tilt);
     }
-
 }
