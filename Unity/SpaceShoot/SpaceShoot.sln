@@ -1,7 +1,7 @@
-Microsoft Visual Studio Solution File, Format Version 11.00
-# Visual Studio 2008
-
-Project("{EC79C56B-3EDD-2BD9-D3EC-38E895BAA7F8}") = "SpaceShoot", "Assembly-CSharp.csproj", "{8D5786C8-9293-016F-587F-FCBB5CA141B5}"
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SpaceShoot.CSharp", "SpaceShoot.CSharp.csproj", "{22AC8F9D-E07E-E43E-DB59-A05690173A4A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -9,15 +9,12 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{8D5786C8-9293-016F-587F-FCBB5CA141B5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{8D5786C8-9293-016F-587F-FCBB5CA141B5}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{8D5786C8-9293-016F-587F-FCBB5CA141B5}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{8D5786C8-9293-016F-587F-FCBB5CA141B5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{22AC8F9D-E07E-E43E-DB59-A05690173A4A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{22AC8F9D-E07E-E43E-DB59-A05690173A4A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{22AC8F9D-E07E-E43E-DB59-A05690173A4A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{22AC8F9D-E07E-E43E-DB59-A05690173A4A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
-	EndGlobalSection
-	GlobalSection(MonoDevelopProperties) = preSolution
-		StartupItem = Assembly-CSharp.csproj
 	EndGlobalSection
 EndGlobal
