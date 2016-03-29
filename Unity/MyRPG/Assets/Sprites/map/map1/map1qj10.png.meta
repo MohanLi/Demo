@@ -1,0 +1,226 @@
+fileFormatVersion: 2
+guid: 0007834c2879b8847977d4f9e4188e2d
+timeCreated: 1459292567
+licenseType: Pro
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: map1qj10_0
+    21300002: map1qj10_1
+    21300004: map1qj10_2
+    21300006: map1qj10_3
+    21300008: map1qj10_4
+    21300010: map1qj10_5
+    21300012: map1qj10_6
+    21300014: map1qj10_7
+    21300016: map1qj10_8
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 1
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  cubemapConvolution: 0
+  cubemapConvolutionSteps: 7
+  cubemapConvolutionExponent: 1.5
+  seamlessCubemap: 0
+  textureFormat: -1
+  maxTextureSize: 2048
+  textureSettings:
+    filterMode: -1
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  rGBM: 0
+  compressionQuality: 50
+  allowsAlphaSplitting: 0
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: map1qj10_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 212
+        width: 69
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -24.5, y: 22}
+        - {x: -34.5, y: 14}
+        - {x: -34.5, y: -22}
+        - {x: 34.5, y: -22}
+        - {x: 34.5, y: 22}
+    - name: map1qj10_1
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 236
+        width: 40
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: map1qj10_2
+      rect:
+        serializedVersion: 2
+        x: 70
+        y: 220
+        width: 41
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: map1qj10_3
+      rect:
+        serializedVersion: 2
+        x: 118
+        y: 196
+        width: 82
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -21, y: 30}
+        - {x: -41, y: 0}
+        - {x: -41, y: -30}
+        - {x: 36, y: -30}
+        - {x: 41, y: -24}
+        - {x: 41, y: 30}
+    - name: map1qj10_4
+      rect:
+        serializedVersion: 2
+        x: 201
+        y: 171
+        width: 163
+        height: 85
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -81.5, y: 42.5}
+        - {x: -81.5, y: 20.5}
+        - {x: -69.5, y: 17.5}
+        - {x: -81.5, y: 13.5}
+        - {x: -81.5, y: -42.5}
+        - {x: 81.5, y: -42.5}
+        - {x: 81.5, y: 42.5}
+    - name: map1qj10_5
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 170
+        width: 43
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -21.5, y: 20}
+        - {x: -21.5, y: -20}
+        - {x: 9.5, y: -20}
+        - {x: 21.5, y: -7}
+        - {x: 21.5, y: 11}
+        - {x: 15.5, y: 20}
+    - name: map1qj10_6
+      rect:
+        serializedVersion: 2
+        x: 46
+        y: 128
+        width: 71
+        height: 84
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 18.5, y: -42}
+        - {x: 35.5, y: -32}
+        - {x: 35.5, y: 33}
+        - {x: 25.5, y: 42}
+        - {x: -20.5, y: 42}
+        - {x: -34.5, y: 35}
+        - {x: -34.5, y: -42}
+      - - {x: -35.5, y: 34}
+        - {x: -35.5, y: 28}
+        - {x: -33.5, y: 28}
+        - {x: -31.5, y: 30}
+        - {x: -31.5, y: 31}
+        - {x: -34.5, y: 34}
+    - name: map1qj10_7
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 136
+        width: 38
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 15, y: 16.5}
+        - {x: -5, y: 16.5}
+        - {x: -14, y: 13.5}
+        - {x: -19, y: 7.5}
+        - {x: -19, y: -5.5}
+        - {x: -1, y: -16.5}
+        - {x: 4, y: -16.5}
+        - {x: 7, y: -15.5}
+        - {x: 19, y: -8.5}
+        - {x: 19, y: 8.5}
+    - name: map1qj10_8
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 36
+        width: 188
+        height: 93
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 17, y: 46.5}
+        - {x: -86, y: 46.5}
+        - {x: -94, y: 41.5}
+        - {x: -94, y: -46.5}
+        - {x: 94, y: -46.5}
+        - {x: 94, y: -5.5}
+        - {x: 46, y: 42.5}
+      - - {x: 89, y: -17.5}
+        - {x: 89, y: -21.5}
+        - {x: 90, y: -23.5}
+        - {x: 93, y: -23.5}
+        - {x: 94, y: -22.5}
+        - {x: 94, y: -15.5}
+        - {x: 93, y: -15.5}
+    outline: []
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
