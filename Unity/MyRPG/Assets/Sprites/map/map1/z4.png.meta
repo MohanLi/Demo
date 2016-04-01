@@ -1,9 +1,15 @@
 fileFormatVersion: 2
 guid: 036b4937f09228d4e8b66e7413e3d9e5
-timeCreated: 1459291857
+timeCreated: 1459476132
 licenseType: Pro
 TextureImporter:
-  fileIDToRecycleName: {}
+  fileIDToRecycleName:
+    21300000: z4_0
+    21300002: z4_1
+    21300004: z4_2
+    21300006: z4_3
+    21300008: z4_4
+    21300010: z4_5
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -30,7 +36,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     filterMode: -1
-    aniso: -1
+    aniso: 16
     mipBias: -1
     wrapMode: 1
   nPOTScale: 0
@@ -38,7 +44,7 @@ TextureImporter:
   rGBM: 0
   compressionQuality: 50
   allowsAlphaSplitting: 0
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -49,7 +55,81 @@ TextureImporter:
   textureType: 8
   buildTargetSettings: []
   spriteSheet:
-    sprites: []
+    sprites:
+    - name: z4_0
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 24
+        width: 216
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: z4_1
+      rect:
+        serializedVersion: 2
+        x: 220
+        y: 7
+        width: 34
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -16, y: 24}
+        - {x: -17, y: 15}
+        - {x: -17, y: -12}
+        - {x: -8, y: -24}
+        - {x: 16, y: -24}
+        - {x: 17, y: -21}
+        - {x: 17, y: 10}
+        - {x: 13, y: 24}
+    - name: z4_2
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 26
+        width: 23
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: z4_3
+      rect:
+        serializedVersion: 2
+        x: 281
+        y: 25
+        width: 26
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: z4_4
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 2
+        width: 216
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: z4_5
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 17
+        width: 20
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
     outline: []
   spritePackingTag: 
   userData: 
