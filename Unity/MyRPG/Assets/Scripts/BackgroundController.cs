@@ -3,6 +3,7 @@ using System.Collections;
 
 public class BackgroundController : MonoBehaviour {
     public Transform[] mBackground;
+    public float parallaxReductionFactor;
     public float parallaScale;
     public float smooting;
 
@@ -20,7 +21,7 @@ public class BackgroundController : MonoBehaviour {
         float parallax = (mCamera.position.x - mPrePosition.x) * parallaScale;
 
         for (int i = 0; i < mBackground.Length; i++) {
-            float backgroundTargetPosX = mBackground[i].position.x + (i + 1) * parallax;
+            float backgroundTargetPosX = mBackground[i].position.x + (i * parallaxReductionFactor + 1) * parallax;
             Vector3 backgroundTargetPos = new Vector3(backgroundTargetPosX, mBackground[i].position.y, mBackground[i].position.z);
             mBackground[i].position = Vector3.Lerp(mBackground[i].position, backgroundTargetPos, smooting * Time.deltaTime);
         }
