@@ -1,7 +1,7 @@
-Microsoft Visual Studio Solution File, Format Version 11.00
-# Visual Studio 2008
-
-Project("{18184888-BB4A-9C18-A80A-5FCCF1A61C31}") = "MyRPG", "Assembly-CSharp.csproj", "{21A655D2-6409-3E39-7C4E-068B5FE1B9B3}"
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyRPG.CSharp", "MyRPG.CSharp.csproj", "{A0D0DA68-A25D-FE44-A49F-A2A0D43727CD}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -9,15 +9,12 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{21A655D2-6409-3E39-7C4E-068B5FE1B9B3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{21A655D2-6409-3E39-7C4E-068B5FE1B9B3}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{21A655D2-6409-3E39-7C4E-068B5FE1B9B3}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{21A655D2-6409-3E39-7C4E-068B5FE1B9B3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A0D0DA68-A25D-FE44-A49F-A2A0D43727CD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A0D0DA68-A25D-FE44-A49F-A2A0D43727CD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A0D0DA68-A25D-FE44-A49F-A2A0D43727CD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A0D0DA68-A25D-FE44-A49F-A2A0D43727CD}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
-	EndGlobalSection
-	GlobalSection(MonoDevelopProperties) = preSolution
-		StartupItem = Assembly-CSharp.csproj
 	EndGlobalSection
 EndGlobal
