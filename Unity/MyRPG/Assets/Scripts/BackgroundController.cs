@@ -33,9 +33,10 @@ public class BackgroundController : MonoBehaviour {
        // Vector3 pos = new Vector3(mCamera.position.x +0.01f* Mathf.Pow(-1f, unm), mCamera.position.y, mCamera.position.z);
        // mCamera.position = pos;// Vector3.Lerp(mCamera.position, pos, Time.deltaTime * 0.01f);
         
-
+        /**
         float x = Input.GetAxis("Horizontal");
         mCamera.position = new Vector3(x, mCamera.position.y, mCamera.position.z);
         Debug.Log(mCamera.position);
+        **/
     }
 }
