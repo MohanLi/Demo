@@ -35,9 +35,6 @@ public class MyPlayerMovement : MonoBehaviour
         movment.Set(h, 0f, v);
         movment = movment.normalized * speed * Time.deltaTime;
         playerRigidbody.MovePosition(transform.position + movment);
-        Debug.Log("h : " + h + ", v : " + v);
-        Debug.Log("movment : " + movment);
-        Debug.Log("transform.position : " + transform.position);
     }
 
     void Turning()
@@ -46,6 +43,7 @@ public class MyPlayerMovement : MonoBehaviour
         RaycastHit floorHit;
         if (Physics.Raycast(camRay, out floorHit, camRayLenght, floorMask))
         {
+            //矢量，设置方向
             Vector3 playerToMouse = floorHit.point - transform.position;
             playerToMouse.y = 0f;
 
