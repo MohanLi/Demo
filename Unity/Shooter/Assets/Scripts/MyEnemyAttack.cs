@@ -7,6 +7,7 @@ public class MyEnemyAttack : MonoBehaviour {
 
     Animator anim;
     GameObject player;
+    MyPlayerHeath playerHealth;
     bool playerInRange;
     float timer;
 
@@ -14,6 +15,7 @@ public class MyEnemyAttack : MonoBehaviour {
     void Awake()
     {
         player = GameObject.FindGameObjectWithTag("Player");
+        playerHealth = player.GetComponent<MyPlayerHeath>();
         anim = GetComponent<Animator>();
     }
 
@@ -30,7 +32,6 @@ public class MyEnemyAttack : MonoBehaviour {
         if (collider.gameObject == player)
         {
             playerInRange = false;
-
         }
     }
 
@@ -46,5 +47,9 @@ public class MyEnemyAttack : MonoBehaviour {
     void Attack()
     {
         timer = 0f;
+        if (playerHealth.currentHealth > 0)
+        {
+            playerHealth.TakeDamage(attackDamage);
+        }
     }
 }
