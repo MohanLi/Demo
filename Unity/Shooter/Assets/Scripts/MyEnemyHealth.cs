@@ -4,30 +4,50 @@ using System.Collections;
 public class MyEnemyHealth : MonoBehaviour {
     public int startingHealth = 100;
     public int currentHealth;
-    public AudioClip deadClip;
+    public float sinkSpeed = 2.5f;
+    public int scoreValue = 10;
+    public AudioClip deathClip;
+
+    Animator anim;
+    AudioSource enemyAudio;
+    ParticleSystem hitParticles;
+    CapsuleCollider capsuleCollider;
 
     bool isDead;
+    bool isSinking;
 
-    AudioSource audio;
-    CapsuleCollider capsuleCollider;
-    Animator anim;
 
     void Awake()
     {
-        audio = GetComponent<AudioSource>();
         anim = GetComponent<Animator>();
+        enemyAudio = GetComponent<AudioSource>();
+        hitParticles = GetComponentInChildren<ParticleSystem>();
         capsuleCollider = GetComponent<CapsuleCollider>();
+
         currentHealth = startingHealth;
     }
 
-    void TakeDamage(int damage)
+    void Update()
+    {
+        if (isSinking)
+        {
+            transform.Translate(-Vector3.up * sinkSpeed * Time.deltaTime);
+        }
+    }
+
+
+    public void TakeDamage(int amount, Vector3 hitPoint)
     {
         if (isDead)
         {
             return;
         }
 
-        currentHealth -= damage;
+        enemyAudio.Play();
+        currentHealth -= amount;
+
+        hitParticles.transform.position = hitPoint;
+        hitParticles.Play();
 
         if (currentHealth <= 0)
         {
@@ -39,10 +59,18 @@ public class MyEnemyHealth : MonoBehaviour {
     {
         isDead = true;
 
-        audio.clip = deadClip;
-        audio.Play();
-
+        capsuleCollider.isTrigger = true;
         anim.SetTrigger("Dead");
+
+        enemyAudio.clip = deathClip;
+        enemyAudio.Play();
+    }
+
+    public void StartSinking()
+    {
+        GetComponent<NavMeshAgent>().enabled = false;
+        GetComponent<Rigidbody>().isKinematic = true;
+        isSinking = true;
 
         Destroy(gameObject, 2f);
     }

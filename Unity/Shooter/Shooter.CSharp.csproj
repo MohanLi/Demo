@@ -84,9 +84,11 @@
     <Compile Include="Assets\Scripts\MyCameraFollow.cs" />
     <Compile Include="Assets\Scripts\MyEnemyAttack.cs" />
     <Compile Include="Assets\Scripts\MyEnemyHealth.cs" />
+    <Compile Include="Assets\Scripts\MyEnemyManager.cs" />
     <Compile Include="Assets\Scripts\MyEnemyMovement.cs" />
     <Compile Include="Assets\Scripts\MyPlayerHeath.cs" />
     <Compile Include="Assets\Scripts\MyPlayerMovement.cs" />
+    <Compile Include="Assets\Scripts\MyPlayerShooting.cs" />
     <Compile Include="Assets\Scripts\Player\PlayerHealth.cs" />
     <Compile Include="Assets\Scripts\Player\PlayerMovement.cs" />
     <Compile Include="Assets\Scripts\Player\PlayerShooting.cs" />
