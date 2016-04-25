@@ -1,12 +1,15 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class SceneLoading : MonoBehaviour {
+public class SceneLoading : BaseUI {
     private UISlider slider;
     private UILabel proLabel;
 
     void Start()
     {
+		//调用父类初始化方法
+		base.Init ();
+
         slider = transform.Find("Slider").GetComponent<UISlider>();
         proLabel = transform.Find("Label").GetComponent<UILabel>();
 
