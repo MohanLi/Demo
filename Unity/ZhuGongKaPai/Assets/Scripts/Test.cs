@@ -16,7 +16,7 @@ public class Test : MonoBehaviour {
 
         Destroy(this);
 **/
-		GameObject obj = SceneMgr.Instance.SwitchScene("Game/UI/SceneLogin");
-		obj.AddComponent<SceneLogin>();
+		SceneMgr.Instance.SwitchScene("SceneLogin", "Hello Unity", 1314, true);
+		//obj.AddComponent<SceneLogin>();
     }
 }

@@ -1,7 +1,13 @@
-﻿using UnityEngine;
+﻿/**
+ * Declare : 登陆界面
+ * Creator : Mohan
+ * Date : 2016-04-26
+ */
+
+using UnityEngine;
 using System.Collections;
 
-public class SceneLogin : BaseUI
+public class SceneLogin : SceneBase
 {
 
     private UIInput inputAcc;
@@ -11,24 +17,24 @@ public class SceneLogin : BaseUI
     private string showText;
 
 	// Use this for initialization
-	void Start () {
-		//调用父类初始化方法
-		base.Init ();
+    //void Start () {
+    //    //调用父类初始化方法
+    //    base.Init ();
 
-        inputAcc = transform.Find("InputAcc").GetComponent<UIInput>();
-        inputPassword = transform.Find("InputPassword").GetComponent<UIInput>();
+    //    //inputAcc = transform.Find("InputAcc").GetComponent<UIInput>();
+    //    //inputPassword = transform.Find("InputPassword").GetComponent<UIInput>();
 
-		/**
-        BoxCollider[] boxColliders = transform.GetComponentsInChildren<BoxCollider>(true);//true表示包括隐藏的
-        foreach (BoxCollider bCollider in boxColliders)
-        {
-            UIEventListener eventListener = UIEventListener.Get(bCollider.gameObject);
-            eventListener.onClick = OnButtonClick;
-        }
-		***/
-        //testLabel = transform.Find("TestLabel").GetComponent<UILabel>();
-        //Test();
-	}
+    //    /**
+    //    BoxCollider[] boxColliders = transform.GetComponentsInChildren<BoxCollider>(true);//true表示包括隐藏的
+    //    foreach (BoxCollider bCollider in boxColliders)
+    //    {
+    //        UIEventListener eventListener = UIEventListener.Get(bCollider.gameObject);
+    //        eventListener.onClick = OnButtonClick;
+    //    }
+    //    ***/
+    //    //testLabel = transform.Find("TestLabel").GetComponent<UILabel>();
+    //    //Test();
+    //}
 
 	protected override void OnClick (GameObject target)
 	{
@@ -36,9 +42,29 @@ public class SceneLogin : BaseUI
 		OnButtonClick (target);
 	}
 
-	protected override void OnDestroyBefore ()
+    protected override void OnInitSkin()
+    {
+        base.SetMainSkinPath("Game/UI/SceneLogin");
+        base.OnInitSkin();
+    }
+
+    protected override void OnInitDone()
+    {
+        base.OnInitDone();
+        inputAcc = SkinTransform.Find("InputAcc").GetComponent<UIInput>();
+        inputPassword = SkinTransform.Find("InputPassword").GetComponent<UIInput>();
+
+
+        //测试打印输出传过来的参数
+        foreach (var item in UIArgs)
+        {
+            Debug.Log(item);
+        }
+    }
+
+    protected override void OnDestroyFront()
 	{
-		base.OnDestroyBefore ();
+        base.OnDestroyFront();
 	}
 
 	protected override void OnDestroyEnd ()
@@ -47,7 +73,6 @@ public class SceneLogin : BaseUI
 
 		inputAcc = null;
 		inputPassword = null;
-		Debug.Log ("=======OnDestroyEnd===========");
 	}
 
     void OnButtonClick(GameObject go)
@@ -66,8 +91,10 @@ public class SceneLogin : BaseUI
             Destroy(transform.gameObject);
 			***/
 
-			GameObject obj = SceneMgr.Instance.SwitchScene("Game/UI/SceneLoading");
-			obj.AddComponent<SceneLoading>();
+            //GameObject obj = SceneMgr.Instance.SwitchScene("Game/UI/SceneLoading");
+            //obj.AddComponent<SceneLoading>();
+
+            SceneMgr.Instance.SwitchScene("SceneLoading", "20102191", "20102191");
         }
     }
 	

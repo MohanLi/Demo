@@ -57,6 +57,12 @@
     <Reference Include="UnityEngine.Networking">
       <HintPath>Library\UnityAssemblies\UnityEngine.Networking.dll</HintPath>
     </Reference>
+    <Reference Include="UnityEngine.Networking">
+      <HintPath>Library\UnityAssemblies\UnityEngine.Networking.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UI">
+      <HintPath>Library\UnityAssemblies\UnityEngine.UI.dll</HintPath>
+    </Reference>
     <Reference Include="UnityEditor">
       <HintPath>Library\UnityAssemblies\UnityEditor.dll</HintPath>
     </Reference>
@@ -206,9 +212,17 @@
     <Compile Include="Assets\NGUI\Scripts\UI\UITooltip.cs" />
     <Compile Include="Assets\NGUI\Scripts\UI\UIViewport.cs" />
     <Compile Include="Assets\Scripts\Core\Asset\ResourceMsg.cs" />
+    <Compile Include="Assets\Scripts\Core\BaseAspect.cs" />
+    <Compile Include="Assets\Scripts\Core\View\BaseUI.cs" />
+    <Compile Include="Assets\Scripts\Core\View\PanelBase.cs" />
+    <Compile Include="Assets\Scripts\Core\View\PanelMgr.cs" />
+    <Compile Include="Assets\Scripts\Core\View\SceneBase.cs" />
+    <Compile Include="Assets\Scripts\Core\View\SceneMgr.cs" />
+    <Compile Include="Assets\Scripts\Game\MainScene.cs" />
     <Compile Include="Assets\Scripts\Game\SceneLoading.cs" />
     <Compile Include="Assets\Scripts\Game\SceneLogin.cs" />
     <Compile Include="Assets\Scripts\Game\SceneMail.cs" />
+    <Compile Include="Assets\Scripts\PlayerInfoUI.cs" />
     <Compile Include="Assets\Scripts\Test.cs" />
   </ItemGroup>
   <ItemGroup>

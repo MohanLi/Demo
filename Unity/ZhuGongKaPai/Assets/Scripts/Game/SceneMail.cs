@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System;
 
-public class SceneMail : MonoBehaviour {
+public class SceneMail : SceneBase {
     private GameObject item;
     private List<GameObject> itemsList;
     private float originY = 130f;
@@ -15,12 +15,32 @@ public class SceneMail : MonoBehaviour {
 
     private string SENDERNAME = "魔帝";
 
-    void Start()
+    protected override void OnInitSkin()
     {
-        itemsList = new List<GameObject>();
-        item = (GameObject)transform.Find("PanelMove/Items/Item").gameObject;
+        base.SetMainSkinPath("Game/UI/SceneMail");
+        base.OnInitSkin();
+    }
 
+    protected override void OnInitDone()
+    {
+        base.OnInitDone();
+
+        itemsList = new List<GameObject>();
+        item = (GameObject) SkinTransform.Find("PanelMove/Items/Item").gameObject;
         ShowItems();
+    }
+
+    protected override void OnClick(GameObject target)
+    {
+        base.OnClick(target);
+        if (target.name.Equals("BackBtn"))
+        {
+            SceneMgr.Instance.SwitchToPreScene();
+        }
+        else if (target.name.Equals("CloseBtn"))
+        {
+
+        }
     }
 
     //显示Item
@@ -30,7 +50,7 @@ public class SceneMail : MonoBehaviour {
         {
             return;
         }
-
+        
         for (int i = 0; i < 10; i++)
         {
             GameObject it = Instantiate(item);
@@ -60,10 +80,10 @@ public class SceneMail : MonoBehaviour {
 
         SetItemPosition(item, index, originY, marginY);
     }
-
     //注册删除按钮
     private void RegisterDeleteButton(GameObject item)
     {
+        
         GameObject deleteButton = item.transform.Find(DELETEBUTTON).gameObject;
         UIEventListener eventListener = UIEventListener.Get(deleteButton);
         eventListener.onClick = OnDeleteBtnClick;
