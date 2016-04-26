@@ -15,7 +15,7 @@ public class MainScene :  SceneBase
 
         if (target.name.Equals("MailBtn"))
         {
-            SceneMgr.Instance.SwitchScene("SceneMail");
+			SceneMgr.Instance.SwitchScene(SceneType.SceneMail);
         }
         else
         {

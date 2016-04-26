@@ -46,10 +46,11 @@ public class SceneMgr
 	/// </summary>
 	/// <param name="name">要创建的资源路径</param>
     /// <param name="objParams">可变参数</param>
-    public void SwitchScene(string name, params object[] objParams)//GameObject
+	public void SwitchScene(SceneType sceneType , params object[] objParams)//GameObject
 	{
 		//GameObject obj = ResourceMsg.GetInstance ().CreateGameObject (name, cache);
 
+		string name = sceneType.ToString ();
         GameObject go = new GameObject(name);
         SceneBase scene = go.AddComponent(Type.GetType(name)) as SceneBase;
         //scene.Init();
@@ -71,7 +72,7 @@ public class SceneMgr
             switchRecorders.Clear();
         }
 
-        switchRecorders.Add(new SwitchRecorder(name, objParams));
+		switchRecorders.Add(new SwitchRecorder(sceneType, objParams));
 
 		if (currentShow != null) 
 		{
@@ -89,7 +90,7 @@ public class SceneMgr
         //将当前场景，以及上一个场景从记录中清理掉
         switchRecorders.RemoveRange(switchRecorders.Count - 2, 2);
 
-        SwitchScene(sRecorder.sceneName, sRecorder.sceneArgs);
+		SwitchScene(sRecorder.sceneType, sRecorder.sceneArgs);
     }
 
     /// <summary>
@@ -97,12 +98,12 @@ public class SceneMgr
     /// </summary>
     internal struct SwitchRecorder
     {
-        internal string sceneName;
+		internal SceneType sceneType;
         internal object[] sceneArgs;
 
-        internal SwitchRecorder(string name, params object[] args)
+		internal SwitchRecorder(SceneType sceneType, params object[] args)
         {
-            this.sceneName = name;
+			this.sceneType = sceneType;
             this.sceneArgs = args;
         }
     }

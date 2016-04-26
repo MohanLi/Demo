@@ -59,7 +59,7 @@ public class SceneLoading : SceneBase {
         }
         else
         {
-            SceneMgr.Instance.SwitchScene("MainScene");
+			SceneMgr.Instance.SwitchScene(SceneType.MainScene);
         }
     }
 

@@ -38,10 +38,10 @@
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="UnityEngine">
-      <HintPath>D:/Program Files (x86)/Unity5.3.1/Editor/Data/Managed/UnityEngine.dll</HintPath>
+      <HintPath>D:/Program Files (x86)/Unity/Editor/Data/Managed/UnityEngine.dll</HintPath>
     </Reference>
     <Reference Include="UnityEditor">
-      <HintPath>D:/Program Files (x86)/Unity5.3.1/Editor/Data/Managed/UnityEditor.dll</HintPath>
+      <HintPath>D:/Program Files (x86)/Unity/Editor/Data/Managed/UnityEditor.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
@@ -183,11 +183,17 @@
      <Compile Include="Assets\NGUI\Scripts\UI\UITooltip.cs" />
      <Compile Include="Assets\NGUI\Scripts\UI\UIViewport.cs" />
      <Compile Include="Assets\Scripts\Core\Asset\ResourceMsg.cs" />
+     <Compile Include="Assets\Scripts\Core\BaseAspect.cs" />
      <Compile Include="Assets\Scripts\Core\View\BaseUI.cs" />
+     <Compile Include="Assets\Scripts\Core\View\PanelBase.cs" />
+     <Compile Include="Assets\Scripts\Core\View\PanelMgr.cs" />
+     <Compile Include="Assets\Scripts\Core\View\SceneBase.cs" />
      <Compile Include="Assets\Scripts\Core\View\SceneMgr.cs" />
+     <Compile Include="Assets\Scripts\Game\MainScene.cs" />
      <Compile Include="Assets\Scripts\Game\SceneLoading.cs" />
      <Compile Include="Assets\Scripts\Game\SceneLogin.cs" />
      <Compile Include="Assets\Scripts\Game\SceneMail.cs" />
+     <Compile Include="Assets\Scripts\PlayerInfoUI.cs" />
      <Compile Include="Assets\Scripts\Test.cs" />
      <None Include="Assets\NGUI\Examples\Shaders\Unlit - Depth Cutout.shader" />
      <None Include="Assets\NGUI\ReadMe - 3.9.4.txt" />
@@ -237,10 +243,10 @@
      <None Include="Assets\NGUI\Examples\Models\Orc Armor\Orc Armor.shader" />
      <None Include="Assets\NGUI\Examples\Resources\Localization.txt" />
  <Reference Include="UnityEngine.UI">
- <HintPath>D:/Program Files (x86)/Unity5.3.1/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
+ <HintPath>D:/Program Files (x86)/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
  </Reference>
  <Reference Include="UnityEngine.Networking">
- <HintPath>D:/Program Files (x86)/Unity5.3.1/Editor/Data/UnityExtensions/Unity/Networking/UnityEngine.Networking.dll</HintPath>
+ <HintPath>D:/Program Files (x86)/Unity/Editor/Data/UnityExtensions/Unity/Networking/UnityEngine.Networking.dll</HintPath>
  </Reference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

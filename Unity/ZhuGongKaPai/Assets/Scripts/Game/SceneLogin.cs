@@ -94,7 +94,7 @@ public class SceneLogin : SceneBase
             //GameObject obj = SceneMgr.Instance.SwitchScene("Game/UI/SceneLoading");
             //obj.AddComponent<SceneLoading>();
 
-            SceneMgr.Instance.SwitchScene("SceneLoading", "20102191", "20102191");
+			SceneMgr.Instance.SwitchScene(SceneType.SceneLoading, "20102191", "20102191");
         }
     }
 	

@@ -38,3 +38,15 @@ public class SceneBase : BaseUI
         uiArgs = sceneArgs;
     }
 }
+
+public enum SceneType
+{
+	/// <summary> 登录 </summary>
+	SceneLogin,
+	/// <summary> 加载 </summary>
+	SceneLoading,
+	/// <summary> 邮件 </summary>
+	SceneMail,
+	/// <summary> 主场景界面 </summary>
+	MainScene
+}
