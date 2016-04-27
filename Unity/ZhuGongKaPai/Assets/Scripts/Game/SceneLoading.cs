@@ -5,20 +5,6 @@ public class SceneLoading : SceneBase {
     private UISlider slider;
     private UILabel proLabel;
 
-    //void Start()
-    //{
-    //    //调用父类初始化方法
-    //    base.Init ();
-
-    //    slider = transform.Find("Slider").GetComponent<UISlider>();
-    //    proLabel = transform.Find("Label").GetComponent<UILabel>();
-
-    //    slider.value = 0f;
-    //    proLabel.text = (100 * slider.value).ToString() + "%";
-
-    //    StartCoroutine(TestProgress());
-    //}
-
     protected override void OnInitSkin()
     {
         base.SetMainSkinPath("Game/UI/SceneLoading");
@@ -36,14 +22,6 @@ public class SceneLoading : SceneBase {
         proLabel.text = (100 * slider.value).ToString() + "%";
 
         StartCoroutine(TestProgress());
-
-
-        //测试打印传过来的参数
-        foreach (var item in UIArgs)
-        {
-            Debug.Log(item);
-        }
-
     }
 
     //模拟进度条

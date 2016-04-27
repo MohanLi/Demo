@@ -213,6 +213,7 @@
     <Compile Include="Assets\NGUI\Scripts\UI\UIViewport.cs" />
     <Compile Include="Assets\Scripts\Core\Asset\ResourceMsg.cs" />
     <Compile Include="Assets\Scripts\Core\BaseAspect.cs" />
+    <Compile Include="Assets\Scripts\Core\GameCamera.cs" />
     <Compile Include="Assets\Scripts\Core\View\BaseUI.cs" />
     <Compile Include="Assets\Scripts\Core\View\PanelBase.cs" />
     <Compile Include="Assets\Scripts\Core\View\PanelMgr.cs" />
