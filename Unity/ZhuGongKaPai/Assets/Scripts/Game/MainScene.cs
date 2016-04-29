@@ -25,6 +25,7 @@ public class MainScene :  SceneBase
     #region 点击事件
     void OnButtonClick(GameObject target)
     {
+        Debug.Log("======================" + target.name);
         switch(target.name)
         {
             case "HeadBtn": //角色ICON
@@ -60,6 +61,9 @@ public class MainScene :  SceneBase
                 break;
             case "SettingBtn": //设置
                 break;
+            case "ShopBtn":    //充值
+                OnShopBtnClick();
+                break;
             default:
                 break;
         }
@@ -91,6 +95,14 @@ public class MainScene :  SceneBase
     private void OnChatBtnClick() 
     {
     
+    }
+
+    /// <summary>
+    /// 点击充值回调
+    /// </summary>
+    private void OnShopBtnClick()
+    {
+        SceneMgr.Instance.SwitchScene(SceneType.SceneShop);
     }
 
     #endregion

@@ -79,6 +79,8 @@ public class SceneMgr
 			GameObject.Destroy (currentShow);
 		}
         currentShow = go;
+
+        LayerMgr.GetInstance().SetLayer(go, LayerType.Scene);
 	}
 
     /// <summary>

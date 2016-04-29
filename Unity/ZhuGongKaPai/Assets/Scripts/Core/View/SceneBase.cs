@@ -48,5 +48,7 @@ public enum SceneType
 	/// <summary> 邮件 </summary>
 	SceneMail,
 	/// <summary> 主场景界面 </summary>
-	MainScene
+	MainScene,
+    /// <summary> 充值商店 </summary>
+    SceneShop,
 }

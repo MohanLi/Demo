@@ -69,6 +69,8 @@ public class PanelMgr
         currentShow = go;
 
         ShowPanelStyle(go);
+
+        LayerMgr.GetInstance().SetLayer(go, LayerType.Panel);
     }
     #endregion
 
