@@ -184,7 +184,10 @@
      <Compile Include="Assets\NGUI\Scripts\UI\UIViewport.cs" />
      <Compile Include="Assets\Scripts\Core\Asset\ResourceMsg.cs" />
      <Compile Include="Assets\Scripts\Core\BaseAspect.cs" />
+     <Compile Include="Assets\Scripts\Core\GameCamera.cs" />
      <Compile Include="Assets\Scripts\Core\View\BaseUI.cs" />
+     <Compile Include="Assets\Scripts\Core\View\LayerBase.cs" />
+     <Compile Include="Assets\Scripts\Core\View\LayerMgr.cs" />
      <Compile Include="Assets\Scripts\Core\View\PanelBase.cs" />
      <Compile Include="Assets\Scripts\Core\View\PanelMgr.cs" />
      <Compile Include="Assets\Scripts\Core\View\SceneBase.cs" />
@@ -193,6 +196,7 @@
      <Compile Include="Assets\Scripts\Game\SceneLoading.cs" />
      <Compile Include="Assets\Scripts\Game\SceneLogin.cs" />
      <Compile Include="Assets\Scripts\Game\SceneMail.cs" />
+     <Compile Include="Assets\Scripts\Game\SceneShop.cs" />
      <Compile Include="Assets\Scripts\PlayerInfoUI.cs" />
      <Compile Include="Assets\Scripts\Test.cs" />
      <None Include="Assets\NGUI\Examples\Shaders\Unlit - Depth Cutout.shader" />
