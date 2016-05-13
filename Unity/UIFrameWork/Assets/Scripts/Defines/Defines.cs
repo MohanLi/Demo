@@ -3,14 +3,18 @@
 namespace UIFrameWork
 {
 	#region 全局状态委托
-	public delegate void StateChangeEvent(Object sender, EnumObjectState newState, EnumObjectState oldState);
+	public delegate void StateChangeEvent(object sender, EnumObjectState newState, EnumObjectState oldState);
+
+    public delegate void MessageEvent(Message message);
+
+    public delegate void OnTouchEventHandle(EventTriggerListener listener, object args, params object[] objParams);
 
 	#endregion
 
 	#region 全局枚举变量
 
 	/// <summary>
-	/// Enum object state.
+	/// UI 状态
 	/// </summary>
 	public enum EnumObjectState
 	{
@@ -23,13 +27,35 @@ namespace UIFrameWork
 	}
 
 	/// <summary>
-	/// Enum user interface type.
+	/// UI 界面类型
 	/// </summary>
 	public enum EnumUIType : int
 	{
 		None = -1,
 		TestOne = 0,
+        TestTwo,
 	}
+
+    /// <summary>
+    /// 点击事件类型
+    /// </summary>
+    public enum EnumTouchEventType
+    {
+        OnClick,
+        OnDoubleClick,
+        OnDown,
+        OnUp,
+        OnEnter,
+        OnExit,
+        OnSelect,
+        OnUpdateSelect,
+        OnDeSelect,
+        OnDrag,
+        OnDragEnd,
+        OnDrop,
+        OnScroll,
+        OnMove,
+    }
 
 	#endregion
 
@@ -63,6 +89,9 @@ namespace UIFrameWork
 			case EnumUIType.TestOne:
 				path = "Prefab/" + UI_PREFAB + "TestOne";
 				break;
+            case EnumUIType.TestTwo:
+                path = "Prefab/" + UI_PREFAB + "TestTwo";
+                break;
 			default:
 				Debug.Log ("Can Not Find EnumUIType, _uiType : " + _uiType.ToString());
 				break;
@@ -72,17 +101,21 @@ namespace UIFrameWork
 
 		public static System.Type GetUIScriptByType(EnumUIType _uiType)
 		{
-			System.Type scriptType = null;
+			System.Type sType = null;
 			switch (_uiType) 
 			{
 			case EnumUIType.TestOne:
-				scriptType = typeof(TestOne);
+                    sType = typeof(TestOne);
 				break;
+
+            case EnumUIType.TestTwo:
+                sType = typeof(TestTwo);
+                break;
 
 			default:
 				break;
 			}
-			return scriptType;
+            return sType;
 		}
 	}
 

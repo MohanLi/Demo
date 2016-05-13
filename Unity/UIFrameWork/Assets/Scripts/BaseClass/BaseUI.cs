@@ -43,7 +43,6 @@ namespace UIFrameWork
 
 		#endregion
 
-
 		#region EnumObjectState && UI Type
 
 		public event StateChangeEvent StateChange;
@@ -55,16 +54,21 @@ namespace UIFrameWork
 		/// <value>The state of the object.</value>
 		public EnumObjectState ObjectState
 		{
-			protected get {
-				return this._objectState;
+			protected set {
+                if (value != _objectState)
+                {
+                    EnumObjectState oldState = _objectState;
+                    _objectState = value;
+                    if (null != StateChange)
+                    {
+                        StateChange(this, _objectState, oldState);
+                    }
+                }
 			}
-			set {
-				if (this._objectState != value) {
-					EnumObjectState oldState = this._objectState;
-					this._objectState = value;
-					StateChange(this, this._objectState, oldState);
-				}
-			}
+            get 
+            {
+                return this._objectState;
+            }
 		}
 
 		public abstract EnumUIType GetUIType ();
@@ -78,7 +82,7 @@ namespace UIFrameWork
 			OnAwake ();
 		}
 
-		void Start () 
+        void Start() 
 		{
 			OnStart ();
 		}

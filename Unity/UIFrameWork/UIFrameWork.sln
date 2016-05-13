@@ -1,7 +1,7 @@
-Microsoft Visual Studio Solution File, Format Version 11.00
-# Visual Studio 2008
-
-Project("{AACB289D-51D5-1C26-8E59-D136B2785BD6}") = "UIFrameWork", "Assembly-CSharp.csproj", "{792A9BFF-D407-154A-2981-14C774E77EE2}"
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UIFrameWork.CSharp", "UIFrameWork.CSharp.csproj", "{EDF05ECF-8534-5D2C-8779-E885496EE9D2}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -9,15 +9,12 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{792A9BFF-D407-154A-2981-14C774E77EE2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{792A9BFF-D407-154A-2981-14C774E77EE2}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{792A9BFF-D407-154A-2981-14C774E77EE2}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{792A9BFF-D407-154A-2981-14C774E77EE2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EDF05ECF-8534-5D2C-8779-E885496EE9D2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EDF05ECF-8534-5D2C-8779-E885496EE9D2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EDF05ECF-8534-5D2C-8779-E885496EE9D2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EDF05ECF-8534-5D2C-8779-E885496EE9D2}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
-	EndGlobalSection
-	GlobalSection(MonoDevelopProperties) = preSolution
-		StartupItem = Assembly-CSharp.csproj
 	EndGlobalSection
 EndGlobal

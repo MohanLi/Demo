@@ -233,7 +233,7 @@ namespace UIFrameWork
 			}
 		}
 
-		public void CloseHandle(Object sender, EnumObjectState newState, EnumObjectState oldState)
+		private void CloseHandle(object sender, EnumObjectState newState, EnumObjectState oldState)
 		{
 			if (newState == EnumObjectState.Closing) 
 			{
