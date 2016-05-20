@@ -8,8 +8,12 @@
 using System;
 using System.Collections.Generic;
 
+
 public class BaseState
 {
+    /// <summary>
+    /// Payer 状态
+    /// </summary>
     public enum PlayerState
     {
         IDLE,
@@ -19,5 +23,14 @@ public class BaseState
         SKILL,
         DAMAGE,
         DEATH,
+    }
+
+    /// <summary>
+    /// player 朝向
+    /// </summary>
+    public enum PlayerOrientation
+    {
+        RIGTH,
+        LEFT,
     }
 }

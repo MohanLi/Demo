@@ -10,6 +10,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+
 public class Player : MonoBehaviour
 {
     #region 成员函数定义
@@ -20,6 +21,9 @@ public class Player : MonoBehaviour
     private float attackRange;
     // 当前状态 默认Idle
     private BaseState.PlayerState playerState = BaseState.PlayerState.IDLE;
+    // 朝向
+    private BaseState.PlayerOrientation playerOrientation = BaseState.PlayerOrientation.RIGTH;
+
     #endregion
 
     #region 生命值HP
@@ -27,9 +31,10 @@ public class Player : MonoBehaviour
     private float hitPoints = 999.0f;
     public float HitPoints
     {
-        get{
+        get
+        {
             return hitPoints;
-        };
+        }
         private set
         {
             hitPoints = value < 0 ? 0 : value;
@@ -126,11 +131,6 @@ public class Player : MonoBehaviour
         playerRigidbody.AddForce(force);
     }
 
-    public Vector3 GetDefaultFoece()
-    {
-        return new Vector3(0, 0, 0);
-    }
-
     /// <summary>
     /// 技能（技能可能分为很多种，此处先考虑只有一种技能的轻快）
     /// </summary>
@@ -168,11 +168,19 @@ public class Player : MonoBehaviour
     #endregion
 
     #region set|get Player 状态
+    /// <summary>
+    /// 获取当前状态
+    /// </summary>
+    /// <returns>返回当前状态</returns>
     public BaseState.PlayerState GetPlayerState()
     {
         return playerState;
     }
 
+    /// <summary>
+    /// 设置当前状态
+    /// </summary>
+    /// <param name="state"></param>
     public void SetPlayerState(BaseState.PlayerState state)
     {
         if (playerState != state)
@@ -180,5 +188,48 @@ public class Player : MonoBehaviour
             playerState = state;
         }
     }
+    #endregion
+
+    /// <summary>
+    /// 获取位置
+    /// </summary>
+    /// <returns></returns>
+    public Vector3 GetPosition()
+    {
+        return transform.position;
+    }
+
+    /// <summary>
+    /// 获取攻击范围
+    /// </summary>
+    /// <returns></returns>
+    public float GetAttackRange()
+    {
+        return attackRange;
+    }
+
+    #region set/get 角色朝向
+
+    /// <summary>
+    /// 设置角色朝向
+    /// </summary>
+    /// <param name="orientation">朝向</param>
+    public void SetPlayerOrientation(BaseState.PlayerOrientation orientation)
+    {
+        if (playerOrientation != orientation)
+        {
+            playerOrientation = orientation;
+        }
+    }
+
+    /// <summary>
+    /// 获取角色朝向
+    /// </summary>
+    /// <returns></returns>
+    public BaseState.PlayerOrientation GetPlayerOrientation()
+    {
+        return playerOrientation;
+    }
+
     #endregion
 }
