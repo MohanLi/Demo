@@ -9,7 +9,7 @@ using System;
 using System.Collections.Generic;
 
 
-public class BaseState
+public class BaseEnum
 {
     /// <summary>
     /// Payer 状态

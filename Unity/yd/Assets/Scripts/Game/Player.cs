@@ -20,9 +20,9 @@ public class Player : MonoBehaviour
     // 攻击范围
     private float attackRange;
     // 当前状态 默认Idle
-    private BaseState.PlayerState playerState = BaseState.PlayerState.IDLE;
+    private BaseEnum.PlayerState playerState = BaseEnum.PlayerState.IDLE;
     // 朝向
-    private BaseState.PlayerOrientation playerOrientation = BaseState.PlayerOrientation.RIGTH;
+    private BaseEnum.PlayerOrientation playerOrientation = BaseEnum.PlayerOrientation.RIGTH;
 
     #endregion
 
@@ -61,15 +61,15 @@ public class Player : MonoBehaviour
     /// </summary>
     /// <param name="stateName">要播放的Clip名称</param>
     /// <param name="flag">true:播放 false:停止</param>
-    private void PlayAnimator(BaseState.PlayerState stateName, bool flag = true)
+    private void PlayAnimator(BaseEnum.PlayerState stateName, bool flag = true)
     {
-        string name = GetName(typeof(BaseState.PlayerState), stateName);
+        string name = GetName(typeof(BaseEnum.PlayerState), stateName);
         playerAnim.SetBool(name, flag);
     }
 
-    private void PlayAnimatorByTrigger(BaseState.PlayerState stateName)
+    private void PlayAnimatorByTrigger(BaseEnum.PlayerState stateName)
     {
-        string name = GetName(typeof(BaseState.PlayerState), stateName);
+        string name = GetName(typeof(BaseEnum.PlayerState), stateName);
         playerAnim.SetTrigger(name);
     }
 
@@ -77,9 +77,9 @@ public class Player : MonoBehaviour
     /// 停止某一动画Clip
     /// </summary>
     /// <param name="name"></param>
-    public void StopClipByName(BaseState.PlayerState stateName)
+    public void StopClipByName(BaseEnum.PlayerState stateName)
     {
-        string name = GetName(typeof(BaseState.PlayerState), stateName);
+        string name = GetName(typeof(BaseEnum.PlayerState), stateName);
         playerAnim.SetBool(name, false);
     }
 
@@ -103,7 +103,7 @@ public class Player : MonoBehaviour
     /// </summary>
     public void Idle()
     {
-        PlayAnimator(BaseState.PlayerState.IDLE);
+        PlayAnimator(BaseEnum.PlayerState.IDLE);
     }
 
     /// <summary>
@@ -111,7 +111,7 @@ public class Player : MonoBehaviour
     /// </summary>
     public void Attack()
     {
-        PlayAnimator(BaseState.PlayerState.ATTACK);
+        PlayAnimator(BaseEnum.PlayerState.ATTACK);
     }
 
     /// <summary>
@@ -119,7 +119,7 @@ public class Player : MonoBehaviour
     /// </summary>
     public void Run()
     {
-        PlayAnimator(BaseState.PlayerState.RUN);
+        PlayAnimator(BaseEnum.PlayerState.RUN);
     }
 
     /// <summary>
@@ -127,7 +127,7 @@ public class Player : MonoBehaviour
     /// </summary>
     public void Jump(Vector3 force)
     {
-        PlayAnimator(BaseState.PlayerState.JUMP);
+        PlayAnimator(BaseEnum.PlayerState.JUMP);
         playerRigidbody.AddForce(force);
     }
 
@@ -136,7 +136,7 @@ public class Player : MonoBehaviour
     /// </summary>
     public void Skill()
     {
-        PlayAnimator(BaseState.PlayerState.SKILL);
+        PlayAnimator(BaseEnum.PlayerState.SKILL);
     }
 
     /// <summary>
@@ -144,7 +144,7 @@ public class Player : MonoBehaviour
     /// </summary>
     public void Damage()
     {
-        PlayAnimator(BaseState.PlayerState.DAMAGE);
+        PlayAnimator(BaseEnum.PlayerState.DAMAGE);
     }
 
     /// <summary>
@@ -152,7 +152,7 @@ public class Player : MonoBehaviour
     /// </summary>
     public void Dead()
     {
-        PlayAnimator(BaseState.PlayerState.DEATH);
+        PlayAnimator(BaseEnum.PlayerState.DEATH);
     }
     #endregion
 
@@ -172,7 +172,7 @@ public class Player : MonoBehaviour
     /// 获取当前状态
     /// </summary>
     /// <returns>返回当前状态</returns>
-    public BaseState.PlayerState GetPlayerState()
+    public BaseEnum.PlayerState GetState()
     {
         return playerState;
     }
@@ -181,7 +181,7 @@ public class Player : MonoBehaviour
     /// 设置当前状态
     /// </summary>
     /// <param name="state"></param>
-    public void SetPlayerState(BaseState.PlayerState state)
+    public void SetState(BaseEnum.PlayerState state)
     {
         if (playerState != state)
         {
@@ -208,13 +208,13 @@ public class Player : MonoBehaviour
         return attackRange;
     }
 
-    #region set/get 角色朝向
+    #region Set|Get 角色朝向
 
     /// <summary>
     /// 设置角色朝向
     /// </summary>
     /// <param name="orientation">朝向</param>
-    public void SetPlayerOrientation(BaseState.PlayerOrientation orientation)
+    public void SetOrientation(BaseEnum.PlayerOrientation orientation)
     {
         if (playerOrientation != orientation)
         {
@@ -226,7 +226,7 @@ public class Player : MonoBehaviour
     /// 获取角色朝向
     /// </summary>
     /// <returns></returns>
-    public BaseState.PlayerOrientation GetPlayerOrientation()
+    public BaseEnum.PlayerOrientation GetOrientation()
     {
         return playerOrientation;
     }

@@ -15,11 +15,27 @@ public class GameController : MonoBehaviour
 
     void Start()
     {
-        player = GameObject.Find("Player").GetComponent<Player>();
+        InitPlayer();
+    }
+
+    void InitPlayer()
+    {
+        //player = GameObject.Find("Player").GetComponent<Player>();
+        GameObject go = GameObject.FindGameObjectWithTag("Player");
+        player = go.GetComponent<Player>();
+        if (null == player)
+        {
+            player = go.AddComponent<Player>();
+        }
     }
 
     void Update()
     {
-      
+        CheckPlayerMove();
+    }
+
+    void CheckPlayerMove()
+    {
+        float h = Input.GetAxis("Horizontal");
     }
 }
