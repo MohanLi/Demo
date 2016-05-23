@@ -9,33 +9,36 @@ using System;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class GameController : MonoBehaviour
+namespace MH
 {
-    private Player player;
-
-    void Start()
+    public class GameController : MonoBehaviour
     {
-        InitPlayer();
-    }
+        private Player player;
 
-    void InitPlayer()
-    {
-        //player = GameObject.Find("Player").GetComponent<Player>();
-        GameObject go = GameObject.FindGameObjectWithTag("Player");
-        player = go.GetComponent<Player>();
-        if (null == player)
+        void Start()
         {
-            player = go.AddComponent<Player>();
+            InitPlayer();
         }
-    }
 
-    void Update()
-    {
-        CheckPlayerMove();
-    }
+        void InitPlayer()
+        {
+            //player = GameObject.Find("Player").GetComponent<Player>();
+            GameObject go = GameObject.FindGameObjectWithTag("Player");
+            player = go.GetComponent<Player>();
+            if (null == player)
+            {
+                player = go.AddComponent<Player>();
+            }
+        }
 
-    void CheckPlayerMove()
-    {
-        float h = Input.GetAxis("Horizontal");
+        void Update()
+        {
+            CheckPlayerMove();
+        }
+
+        void CheckPlayerMove()
+        {
+            float h = Input.GetAxis("Horizontal");
+        }
     }
 }

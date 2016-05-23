@@ -8,29 +8,31 @@
 using System;
 using System.Collections.Generic;
 
-
-public class BaseEnum
+namespace MH
 {
-    /// <summary>
-    /// Payer 状态
-    /// </summary>
-    public enum PlayerState
+    public class BaseEnum
     {
-        IDLE,
-        ATTACK,
-        RUN,
-        JUMP,
-        SKILL,
-        DAMAGE,
-        DEATH,
-    }
+        /// <summary>
+        /// Payer 状态
+        /// </summary>
+        public enum PlayerState
+        {
+            IDLE,
+            ATTACK,
+            RUN,
+            JUMP,
+            SKILL,
+            DAMAGE,
+            DEATH,
+        }
 
-    /// <summary>
-    /// player 朝向
-    /// </summary>
-    public enum PlayerOrientation
-    {
-        RIGTH,
-        LEFT,
+        /// <summary>
+        /// player 朝向
+        /// </summary>
+        public enum PlayerOrientation
+        {
+            RIGTH,
+            LEFT,
+        }
     }
 }
