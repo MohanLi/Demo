@@ -191,6 +191,8 @@ namespace MH
         }
         #endregion
 
+        #region GetPosition()  GetAttackRange()
+
         /// <summary>
         /// 获取位置
         /// </summary>
@@ -208,6 +210,8 @@ namespace MH
         {
             return attackRange;
         }
+
+        #endregion
 
         #region Set|Get 角色朝向
 

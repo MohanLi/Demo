@@ -19,8 +19,6 @@ namespace MH
         void Start()
         {
             InitStateDict();
-
-
             player = transform.gameObject.AddComponent<Player>();
         }
 
@@ -39,6 +37,10 @@ namespace MH
             }
         }
 
+        /// <summary>
+        /// 切换状态
+        /// </summary>
+        /// <param name="newState">新的状态</param>
         public void SwitchPlayerState(string newState)
         {
             player.SetState(stateDict[newState.ToLower()]);
