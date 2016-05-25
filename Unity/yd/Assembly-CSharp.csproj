@@ -52,7 +52,8 @@
      <Compile Include="Assets\Scripts\Game\GameController.cs" />
      <Compile Include="Assets\Scripts\Game\Player.cs" />
      <Compile Include="Assets\Scripts\Game\PlayerController.cs" />
-     <Compile Include="Assets\Scripts\PlayerController.cs" />
+     <Compile Include="Assets\Scripts\JoyStick\JoyStick.cs" />
+     <Compile Include="Assets\Scripts\JoyStick\PlayerCT3D.cs" />
      <Compile Include="Assets\Scripts\Test.cs" />
      <None Include="Assets\Blade_Warrior\ReadMe.txt" />
  <Reference Include="UnityEngine.UI">

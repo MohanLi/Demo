@@ -10,7 +10,6 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-
 public class Player : MonoBehaviour
 {
     #region 成员函数定义
@@ -73,9 +72,9 @@ public class Player : MonoBehaviour
         SetState(stateName);
         //===================写法有待改进=====================
 
-        m_PlayerAnim.SetBool(name, true);
+        //m_PlayerAnim.SetBool(name, true);
+        m_PlayerAnim.SetTrigger(name);
     }
-
     private void PlayAnimatorByTrigger(BaseEnum.PlayerState stateName)
     {
         string name = GetName(typeof(BaseEnum.PlayerState), stateName);
