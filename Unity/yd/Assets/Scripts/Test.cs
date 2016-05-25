@@ -22,4 +22,9 @@ public class Test : MonoBehaviour {
     {
         Debug.Log("==================OnBecameVisible name : " + gameObject.name);
     }
+
+    public  void SetPlayerState(string name)
+    {
+
+    }
 }

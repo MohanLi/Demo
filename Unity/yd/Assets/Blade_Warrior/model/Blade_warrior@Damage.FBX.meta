@@ -259,7 +259,7 @@ ModelImporter:
       events:
       - time: 0
         functionName: SetPlayerState
-        data: damage
+        data: Damage
         objectReferenceParameter: {instanceID: 0}
         floatParameter: 0
         intParameter: 0

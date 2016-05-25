@@ -9,25 +9,7 @@ using System;
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace MH
+public class GameController : MonoBehaviour
 {
-    public class GameController : MonoBehaviour
-    {
-        private Player player;
 
-        void Start()
-        {
-            
-        }
-
-        void Update()
-        {
-            CheckPlayerMove();
-        }
-
-        void CheckPlayerMove()
-        {
-            float h = Input.GetAxis("Horizontal");
-        }
-    }
 }
