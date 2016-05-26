@@ -78,12 +78,13 @@
     <Compile Include="Assets\Scripts\BackgroundParallax.cs" />
     <Compile Include="Assets\Scripts\CameraFollow.cs" />
     <Compile Include="Assets\Scripts\Game\BaseEnum.cs" />
+    <Compile Include="Assets\Scripts\Game\FightButtonEvent.cs" />
     <Compile Include="Assets\Scripts\Game\GameController.cs" />
     <Compile Include="Assets\Scripts\Game\Player.cs" />
     <Compile Include="Assets\Scripts\Game\PlayerController.cs" />
+    <Compile Include="Assets\Scripts\Game\StateDelegate.cs" />
     <Compile Include="Assets\Scripts\JoyStick\JoyStick.cs" />
     <Compile Include="Assets\Scripts\JoyStick\PlayerCT3D.cs" />
-    <Compile Include="Assets\Scripts\Test.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Blade_Warrior\ReadMe.txt" />

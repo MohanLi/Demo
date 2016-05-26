@@ -12,10 +12,16 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
-    #region 成员函数定义
+    #region 成员变量定义
     private Animator m_PlayerAnim;
     private Rigidbody m_PlayerRigidbody;
 
+    // Player Runing 的速度
+    public float speed = 3;
+    // Player 最小X值
+    public float minX = -8f;
+    // Player 最大X值
+    public float maxX = 36f;
     //奔跑速度
     private float m_RunSpeed = 3.0f;
     // 攻击范围
@@ -30,17 +36,6 @@ public class Player : MonoBehaviour
     #region 生命值HP
     // 生命值
     private float m_PitPoints = 999.0f;
-    public float HitPoints
-    {
-        get
-        {
-            return m_PitPoints;
-        }
-        private set
-        {
-            m_PitPoints = value < 0 ? 0 : value;
-        }
-    }
     #endregion
 
     #region 系统函数 Start
@@ -66,29 +61,8 @@ public class Player : MonoBehaviour
     {
         if (stateName == GetState()) return;
 
-        //===================写法有待改进=====================
-        StopClipByName(GetState());
-        string name = GetName(typeof(BaseEnum.PlayerState), stateName);
-        SetState(stateName);
-        //===================写法有待改进=====================
-
-        //m_PlayerAnim.SetBool(name, true);
-        m_PlayerAnim.SetTrigger(name);
-    }
-    private void PlayAnimatorByTrigger(BaseEnum.PlayerState stateName)
-    {
         string name = GetName(typeof(BaseEnum.PlayerState), stateName);
         m_PlayerAnim.SetTrigger(name);
-    }
-
-    /// <summary>
-    /// 停止某一动画Clip
-    /// </summary>
-    /// <param name="name"></param>
-    public void StopClipByName(BaseEnum.PlayerState stateName)
-    {
-        string name = GetName(typeof(BaseEnum.PlayerState), stateName);
-        m_PlayerAnim.SetBool(name, false);
     }
 
     /// <summary>
@@ -96,7 +70,7 @@ public class Player : MonoBehaviour
     /// </summary>
     /// <param name="enumType">要转换的类型</param>
     /// <param name="value">需要转换的值</param>
-    /// <returns></returns>
+    /// <returns>状态名称</returns>
     private string GetName(Type enumType, object value)
     {
         return Enum.GetName(enumType, value).ToLower();
@@ -128,7 +102,6 @@ public class Player : MonoBehaviour
     public void Run()
     {
         PlayAnimator(BaseEnum.PlayerState.RUN);
-        transform.Translate(Vector3.forward * m_RunSpeed * Time.deltaTime);
     }
 
     /// <summary>
@@ -165,15 +138,26 @@ public class Player : MonoBehaviour
     }
     #endregion
 
-    #region 受击减少HP
+    #region HP
     /// <summary>
     /// 受击后HP减少
     /// </summary>
     /// <param name="reduceHP">较少的HP</param>
     public void ReduceHitPoints(float reduceHP)
     {
-        HitPoints -= reduceHP;
+        m_PitPoints -= reduceHP;
+        m_PitPoints = m_PitPoints < 0 ? 0 : m_PitPoints;
     }
+
+    /// <summary>
+    /// 获取HitPoints
+    /// </summary>
+    /// <returns>Hp</returns>
+    public float GetHitPoints()
+    {
+        return m_PitPoints;
+    }
+
     #endregion
 
     #region set|get Player 状态
@@ -199,7 +183,7 @@ public class Player : MonoBehaviour
     }
     #endregion
 
-    #region GetPosition()  GetAttackRange()
+    #region GetPosition && GetAttackRange 函数
 
     /// <summary>
     /// 获取位置
@@ -264,4 +248,31 @@ public class Player : MonoBehaviour
     }
 
     #endregion
+
+    /// <summary>
+    /// 是否可以移动
+    /// </summary>
+    /// <returns></returns>
+    private bool IsCanMove()
+    {
+        return transform.position.x > minX && transform.position.x < maxX;
+    }
+
+    public void Move()
+    {
+        if (IsCanMove())
+        {
+
+        }
+        transform.Translate(Vector3.forward * Time.deltaTime * speed);
+
+        if (transform.position.x < minX)
+        {
+            transform.position = new Vector3(minX, transform.position.y, transform.position.z);
+        }
+        else if (transform.position.x > maxX)
+        {
+            transform.position = new Vector3(maxX, transform.position.y, transform.position.z);
+        }
+    }
 }

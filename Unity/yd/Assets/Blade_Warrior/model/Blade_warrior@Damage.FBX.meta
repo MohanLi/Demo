@@ -258,8 +258,8 @@ ModelImporter:
       curves: []
       events:
       - time: 0
-        functionName: SetPlayerState
-        data: Damage
+        functionName: SwitchPlayerState
+        data: damage
         objectReferenceParameter: {instanceID: 0}
         floatParameter: 0
         intParameter: 0

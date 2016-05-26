@@ -250,8 +250,8 @@ ModelImporter:
       curves: []
       events:
       - time: 0
-        functionName: SetPlayerState
-        data: Jump
+        functionName: SwitchPlayerState
+        data: jump
         objectReferenceParameter: {instanceID: 0}
         floatParameter: 0
         intParameter: 0
